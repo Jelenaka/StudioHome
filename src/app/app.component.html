@@ -1,18 +1,32 @@
 <clr-main-container>
   <clr-header class="header-3">
     <div class="branding">
-      <a class="nav-link">
+      <a class="nav-link" [routerLink]="['/home']">
         <clr-icon shape="microphone" size="48"></clr-icon>
         <span class="title">Paco Nieto Locutorio</span>
       </a>
     </div>
     <div class="header-nav clr-row clr-justify-content-center" [clr-nav-level]="1">
-        <a href="javascript://" class="active nav-link nav-text">Home/Inicio</a>
-        <a href="javascript://" class="nav-link nav-text">Sobre mí</a>
-        <a href="javascript://" class="nav-link nav-text">Portfolio</a>
-        <a href="javascript://" class="nav-link nav-text">Contacto</a>
+        <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link nav-text">Home/Inicio</a>
+        <a [routerLink]="['/about-me']" routerLinkActive="active" class="nav-link nav-text">Sobre mí</a>
+        <a [routerLink]="['/portfolio']" routerLinkActive="active" class="nav-link nav-text">Portfolio</a>
+        <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link nav-text">Contacto</a>
     </div>
   </clr-header>
-
+  <div class="content-container">
+    <div class="clr-col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+<!--TODO: Mover a un componente aparte-->
+  <div class="clr-footer">
+    <div class="clr-row">
+    <div class="clr-col-3">
+      <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
+    </div>
+    <div class="clr-col-3">
+      <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: paco.nieto@gmail.com</span>
+    </div>
+  </div>
+</div>
 </clr-main-container>
-<router-outlet></router-outlet>

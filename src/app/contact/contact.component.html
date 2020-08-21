@@ -1,0 +1,30 @@
+<div class="clr-row clr-justify-content-center">
+    <div class="content-container clr-col-lg-6 clr-col-12">
+        <div class="card">
+            <div class="card-header">
+                Contacta conmigo
+            </div>
+            <div class="card-block">
+                <div class="card-text">
+                    <form clrForm clrLayout="vertical">
+                        <div class="clr-row">
+                         <div class="clr-col-md-6 clr-col-12">
+                                <input clrInput placeholder="Tu nombre" [(ngModel)]="itemContact.name" />
+                                <input clrInput placeholder="Tu teléfono" [(ngModel)]="itemContact.phone" />
+                                <input clrInput placeholder="Tu email" [(ngModel)]="itemContact.email" />
+                            </div>
+                            <div class="clr-col-md-6 clr-col-12">
+                                <input clrInput placeholder="Asunto" [(ngModel)]="itemContact.asunto" />
+                            <textarea placeholder="Mensaje" cols=40 clrTextarea [(ngModel)]="itemContact.description" name="description" required></textarea>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-link">Enviar</button>
+                <button class="btn btn-sm btn-link">Limpiar</button>
+            </div>
+        </div>
+    </div>
+</div>
