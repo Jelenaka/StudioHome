@@ -17,7 +17,10 @@ const routes: Routes = [
     },{
       path: 'about-me',
       component: AboutMeComponent
-      }
+      },{
+        path: '',
+        component: HomeComponent
+        }
 ]
 
 @NgModule({

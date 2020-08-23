@@ -7,26 +7,26 @@
       </a>
     </div>
     <div class="header-nav clr-row clr-justify-content-center" [clr-nav-level]="1">
-        <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link nav-text">Home/Inicio</a>
-        <a [routerLink]="['/about-me']" routerLinkActive="active" class="nav-link nav-text">Sobre mí</a>
-        <a [routerLink]="['/portfolio']" routerLinkActive="active" class="nav-link nav-text">Portfolio</a>
-        <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link nav-text">Contacto</a>
+      <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link nav-text">Home/Inicio</a>
+      <a [routerLink]="['/about-me']" routerLinkActive="active" class="nav-link nav-text">Sobre mí</a>
+      <a [routerLink]="['/portfolio']" routerLinkActive="active" class="nav-link nav-text">Portfolio</a>
+      <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link nav-text">Contacto</a>
     </div>
   </clr-header>
   <div class="content-container">
-    <div class="clr-col-12">
+    <div class="content-area">
       <router-outlet></router-outlet>
     </div>
   </div>
-<!--TODO: Mover a un componente aparte-->
+  <!--TODO: Mover a un componente aparte-->
   <div class="clr-footer">
     <div class="clr-row">
-    <div class="clr-col-3">
-      <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
-    </div>
-    <div class="clr-col-3">
-      <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: paco.nieto@gmail.com</span>
+      <div class="clr-col-3">
+        <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
+      </div>
+      <div class="clr-col-3">
+        <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: paco.nieto@gmail.com</span>
+      </div>
     </div>
   </div>
-</div>
 </clr-main-container>
