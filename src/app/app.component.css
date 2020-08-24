@@ -258,13 +258,12 @@
   }
   /* // TODO: NO poner color fijo */
   .clr-footer {
+    padding:24px;
     background: #320047;
     color: white;
     height: 60px;
-    line-height: 60px;
     font-size: 14px;
     align-items: center;
-    padding: 0 24px;
   }
 
 
