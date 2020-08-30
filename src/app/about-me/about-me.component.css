@@ -1,0 +1,10 @@
+
+
+  .img-about-me img {
+    border: 1px solid black;
+    border-radius: 15px;
+    opacity: 0.5 !important;
+    margin: 6px;
+    width: 100%;
+    height: auto;
+  }

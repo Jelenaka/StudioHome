@@ -1,0 +1,24 @@
+ /* background-image: url("paper.gif") */
+ @media (max-width: 767px) {
+   
+ }
+ .font-small{
+  font-size:2vw;
+}
+
+.btn.btn-inverse.btn-main-1{
+  color:#1EA869;
+  border-color: #1EA869;
+}
+
+.btn.btn-inverse.btn-main-2{
+  color: #F5B32C;
+  border-color: #F5B32C;
+}
+p.header-card-style{
+  line-height: normal;
+  color:#F5B32C;
+  font-weight: bold;
+  font-size: 34px;
+  margin: 0px;
+}

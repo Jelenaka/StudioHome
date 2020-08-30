@@ -213,13 +213,11 @@
 
   footer {
     margin-top: 8px;
-    display: flex;
     align-items: center;
     line-height: 20px;
   }
 
   footer a {
-    display: flex;
     align-items: center;
   }
 
@@ -257,15 +255,18 @@
     width: 1920px;
   }
   /* // TODO: NO poner color fijo */
-  .clr-footer {
-    padding:24px;
+   .clr-footer {
+    /* margin-top:24px; */
+    padding:12px;
     background: #320047;
     color: white;
-    height: 60px;
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
-  }
+  } 
 
+  .no-margin{
+    margin-top: 0px;
+  }
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
