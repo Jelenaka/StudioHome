@@ -1,0 +1,5 @@
+.increment-button:hover,
+.increment-button:focus,
+.increment-button:active {
+    transform: scale(1.1);
+}

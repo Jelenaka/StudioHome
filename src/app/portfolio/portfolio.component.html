@@ -1,12 +1,38 @@
 <div class="content-container">
-    <clr-vertical-nav>
-        <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">Locución</a>
-        <a clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active">Publicidad</a>
-        <a clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">Doblaje</a>
-        <a clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">Documentales</a>
-        <a clrVerticalNavLink routerLink="./snorlax" routerLinkActive="active">Videos corporativos</a>
-    </clr-vertical-nav>
-    <div class="content-area">
-        <router-outlet></router-outlet>
-    </div>
+  <clr-tabs class="clr-col-12">
+    <clr-tab>
+      <button clrTabLink>Videojuegos</button>
+      <clr-tab-content id="content1">
+        <app-videogames></app-videogames>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Animación</button>
+      <clr-tab-content id="content1">
+        <app-animation></app-animation>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Publicidad</button>
+      <clr-tab-content id="content1">
+        <app-commercial></app-commercial>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>E-Learning</button>
+      <clr-tab-content id="content1">
+        <app-elearning></app-elearning>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <clr-tab>
+        <button clrTabLink>Locución</button>
+        <clr-tab-content id="content1">
+        </clr-tab-content>
+      </clr-tab>
+      <button clrTabLink>Doblaje</button>
+      <clr-tab-content id="content1">
+      </clr-tab-content>
+    </clr-tab>
+  </clr-tabs>
 </div>

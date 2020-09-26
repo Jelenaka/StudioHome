@@ -22,3 +22,9 @@ p.header-card-style{
   font-size: 34px;
   margin: 0px;
 }
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}

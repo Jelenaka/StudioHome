@@ -1,4 +1,10 @@
 <div class="clr-row clr-justify-content-center">
+    
+    <div class="clr-col-2">
+        <div class="clr-row clr-justify-content-center">
+            <img src="./assets/img/micro1.png" style="opacity: 0.5;">
+        </div>
+    </div>
     <div class="content-container clr-col-lg-6 clr-col-12">
         <div class="card">
             <div class="card-header">
@@ -10,18 +16,23 @@
                     <p>Puedes contactar y pedirme presupuesto <b>por mail</b>, o si lo prefieres
                         <b>cumplimentar y enviarme el siguiente formulario.</b></p>
                     <!-- TODO: HACER BOTON? -->
-                    <p><a href="mailto:paconietogarcia@gmail.com">Envíar correo a paconietogarcia@gmail.com</a></p>
+                    <p><a href="mailto:info@paconietolocutor.com">Envíar correo a info@paconietolocutor.com</a></p>
                     <br>
                     <form clrForm [formGroup]="itemContact" clrLayout="vertical">
                         <div class="clr-row">
                             <div class="clr-col-md-6 clr-col-12">
-                                <input clrInput placeholder="Tu nombre" formControlName="name" />
-                                <input clrInput placeholder="Tu teléfono"  formControlName="phone"/>
-                                <input clrInput placeholder="Tu email" formControlName="email"/>
+                                <div class="form-group">
+                                    <input clrInput placeholder="Tu nombre *" formControlName="name" required/>
+                                    <!-- <div *ngIf="itemContact.controls['name'].errors.required">
+                                        El Nom del professional es obligatori
+                                    </div> -->
+                                </div>
+                                <input clrInput placeholder="Tu teléfono *"  formControlName="phone" required/>
+                                <input clrInput placeholder="Tu email *" type="email" [email]="true" formControlName="email" required/>
                             </div>
                             <div class="clr-col-md-6 clr-col-12">
-                                <input clrInput placeholder="Asunto" formControlName="asunto"/>
-                                <textarea placeholder="Mensaje" cols=40 clrTextarea
+                                <input clrInput placeholder="Asunto *" formControlName="asunto" required/>
+                                <textarea placeholder="Mensaje *" cols=40 clrTextarea required
                                 formControlName="description" name="description"></textarea>
                             </div>
                         </div>
@@ -29,8 +40,8 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-sm btn-link" [disabled]="this.itemContact.status === 'INVALID'">Enviar formulario</button>
-                <button class="btn btn-sm btn-link" (click)="itemContact.reset();">Limpiar</button>
+                <button class="btn btn-sm btn-link increment-button" [disabled]="this.itemContact.status === 'INVALID'">Enviar formulario</button>
+                <button class="btn btn-sm btn-link increment-button" (click)="itemContact.reset();">Limpiar</button>
             </div>
         </div>
     </div>

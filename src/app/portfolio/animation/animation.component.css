@@ -1,0 +1,12 @@
+/* Important stuff for this demo. */
+
+img {
+    width: 15vw;
+    height: 10vw;
+  }
+
+  img:hover {
+    opacity: 0.7;
+  }
+
+  
