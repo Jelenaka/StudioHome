@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-videogames',
@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videogames.component.css']
 })
 export class VideogamesComponent implements OnInit {
-  audioDiablo: HTMLAudioElement;
-  audioTheWitcher: HTMLAudioElement;
-  audioDishonored: HTMLAudioElement;
+  @Input() audioDiablo: HTMLAudioElement;
+  @Input() audioTheWitcher: HTMLAudioElement;
+  @Input() audioDishonored: HTMLAudioElement;
   constructor() { }
 
   ngOnInit(): void {
-    this.audioTheWitcher = new Audio('../../assets/audio/TheWitcher.mp3'); 
-    this.audioDiablo = new Audio('../../assets/audio/DiabloIII.mp3'); 
-    this.audioDishonored = new Audio('../../assets/audio/Dishonored.mp3');
+    // this.audioTheWitcher = new Audio('../../assets/audio/TheWitcher.mp3'); 
+    // this.audioDiablo = new Audio('../../assets/audio/DiabloIII.mp3'); 
+    // this.audioDishonored = new Audio('../../assets/audio/Dishonored.mp3');
   }
   pausedAllElements()  {
     this.audioDiablo.pause(); 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-animation',
@@ -6,27 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animation.component.css']
 })
 export class AnimationComponent implements OnInit {
-  audio: HTMLAudioElement;
-  audioBaki: HTMLAudioElement;
-  //TODO USAR : HTMLVideoElement
-  video: any;
-  video2: any;
-  video3: any;
+ @Input() audioBaki: HTMLAudioElement;
+  source: string;
+  title: string;
+  sourceSelected: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.audioBaki = new Audio('../../assets/audio/Baki1.mp3'); 
-    this.video = document.getElementById('video');
-    this.video2 = document.getElementById('video2');
+   // this.audioBaki = new Audio('../../assets/audio/Baki1.mp3'); 
   }
 
-  pausedAllElements(code)  {
-    if (code === 'B'){
-      this.audioBaki.play(); 
-    } else {
+  pausedAllElements(event?)  {
       this.audioBaki.pause(); 
-    }
   }
 
 }

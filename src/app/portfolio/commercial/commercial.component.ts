@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-commercial',
   templateUrl: './commercial.component.html',
-  styleUrls: ['./commercial.component.css']
+  styleUrls: ['../portfolio.component.css']
 })
-export class CommercialComponent implements OnInit {
+export class CommercialComponent implements OnInit, OnChanges {
 
-  audioMercedesBenz: HTMLAudioElement;
-  audioChicco: HTMLAudioElement;
+  @Input() audioMercedesBenz: HTMLAudioElement;
+  @Input() audioChicco: HTMLAudioElement;
   constructor() { }
 
   ngOnInit(): void {
-    this.audioChicco = new Audio('../../assets/audio/Chicco2010.mp3'); 
-    this.audioMercedesBenz = new Audio('../../assets/audio/MercedesBenz.mp3'); 
+    // this.audioChicco = new Audio('../../assets/audio/Chicco2010.mp3'); 
+    // this.audioMercedesBenz = new Audio('../../assets/audio/MercedesBenz.mp3'); 
   }
   pausedAllElements()  {
     this.audioMercedesBenz.pause(); 
     this.audioChicco.pause();
+  }
+  ngOnChanges(){
+    console.log("destroy");
   }
 }

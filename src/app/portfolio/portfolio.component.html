@@ -1,38 +1,40 @@
-<div class="content-container">
-  <clr-tabs class="clr-col-12">
-    <clr-tab>
-      <button clrTabLink>Videojuegos</button>
-      <clr-tab-content id="content1">
-        <app-videogames></app-videogames>
-      </clr-tab-content>
-    </clr-tab>
-    <clr-tab>
-      <button clrTabLink>Animación</button>
-      <clr-tab-content id="content1">
-        <app-animation></app-animation>
-      </clr-tab-content>
-    </clr-tab>
-    <clr-tab>
-      <button clrTabLink>Publicidad</button>
-      <clr-tab-content id="content1">
-        <app-commercial></app-commercial>
-      </clr-tab-content>
-    </clr-tab>
-    <clr-tab>
-      <button clrTabLink>E-Learning</button>
-      <clr-tab-content id="content1">
-        <app-elearning></app-elearning>
-      </clr-tab-content>
-    </clr-tab>
-    <clr-tab>
+<div class="clr-row clr-justify-content-center">
+  <div class="clr-col-12">
+    <clr-tabs >
       <clr-tab>
-        <button clrTabLink>Locución</button>
+        <clr-tab>
+          <button clrTabLink (click)="pausedAllElements()"> Locución </button>
+          <clr-tab-content id="content1">
+            <app-locution [audioTiendaHorrores]="audioTiendaHorrores" [audioGuiltyGear]="audioGuiltyGear"
+              [audioCofradia]="audioCofradia"></app-locution>
+          </clr-tab-content>
+        </clr-tab>
+      </clr-tab>
+      <clr-tab>
+        <button clrTabLink (click)="pausedAllElements()">Videojuegos</button>
         <clr-tab-content id="content1">
+          <app-videogames [audioTheWitcher]="audioTheWitcher" [audioDishonored]="audioDishonored"
+            [audioDiablo]="audioDiablo"></app-videogames>
         </clr-tab-content>
       </clr-tab>
-      <button clrTabLink>Doblaje</button>
-      <clr-tab-content id="content1">
-      </clr-tab-content>
-    </clr-tab>
-  </clr-tabs>
+      <clr-tab>
+        <button clrTabLink (click)="pausedAllElements()">Animación</button>
+        <clr-tab-content id="content1">
+          <app-animation [audioBaki]="audioBaki"></app-animation>
+        </clr-tab-content>
+      </clr-tab>
+      <clr-tab>
+        <button clrTabLink (click)="pausedAllElements()">Publicidad</button>
+        <clr-tab-content id="content1">
+          <app-commercial [audioChicco]="audioChicco" [audioMercedesBenz]="audioMercedesBenz"></app-commercial>
+        </clr-tab-content>
+      </clr-tab>
+      <clr-tab>
+        <button clrTabLink (click)="pausedAllElements()">E-Learning</button>
+        <clr-tab-content id="content1">
+          <app-elearning [audioVocento]="audioVocento"></app-elearning>
+        </clr-tab-content>
+      </clr-tab>
+    </clr-tabs>
+  </div>
 </div>

@@ -7,17 +7,17 @@
 }
 
 .btn.btn-inverse.btn-main-1{
-  color:#1EA869;
-  border-color: #1EA869;
+  color:#AD9849;
+  border-color: #AD9849;
 }
 
 .btn.btn-inverse.btn-main-2{
-  color: #F5B32C;
-  border-color: #F5B32C;
+  color: #DD7F6C;
+  border-color: #DD7F6C;
 }
 p.header-card-style{
   line-height: normal;
-  color:#F5B32C;
+  color:#DD7F6C;
   font-weight: bold;
   font-size: 34px;
   margin: 0px;

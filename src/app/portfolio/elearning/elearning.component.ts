@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-elearning',
@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElearningComponent implements OnInit {
   
-  audioVocento: HTMLAudioElement;
+  @Input() audioVocento: HTMLAudioElement;
+
   constructor() { }
 
   ngOnInit(): void {
-    this.audioVocento = new Audio('../../assets/audio/LocucionVocento.mp3'); 
+    // this.audioVocento = new Audio('../../assets/audio/LocucionVocento.mp3'); 
   }
     
   pausedAllElements()  {

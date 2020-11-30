@@ -1,19 +1,14 @@
 <clr-main-container>
   <div class="clr-row clr-justify-content-center" style="margin:0px;">
-    <div class="branding">
+    <div class="branding clr-row clr-col-6 clr-col-md-4 clr-col-xl-2">
       <a class="nav-link" [routerLink]="['/home']">
-        <clr-icon shape="microphone" size="48"></clr-icon>
-        <span class="title">Paco Nieto Locutorio</span>
+        <img src="./assets/img/paconietolocutor.png"
+          style="margin:12px;background: linear-gradient(to bottom, rgba(url('./assets/img/logo02112.png'), 0.0), rgba(url('./assets/img/logo02112.png'), 1.0));"
+          class="clr-col-12 clr-col-md-12">
       </a>
     </div>
   </div>
-  <clr-header class="header-3 clr-justify-content-center">
-    <!-- <div class="branding">
-      <a class="nav-link" [routerLink]="['/home']">
-        <clr-icon shape="microphone" size="48"></clr-icon>
-        <span class="title">Paco Nieto Locutorio</span>
-      </a>
-    </div> -->
+  <clr-header class="header-1 clr-justify-content-center">
     <div class="header-nav clr-row clr-justify-content-center" [clr-nav-level]="1">
       <a [routerLink]="['/home']" routerLinkActive="active" class="increment-button nav-link nav-text">Inicio</a>
       <a [routerLink]="['/about-me']" routerLinkActive="active" class="increment-button nav-link nav-text">Sobre mí</a>
@@ -22,39 +17,10 @@
     </div>
   </clr-header>
   <div class="content-container">
+    <!-- style="display:inline-block" -->
     <div class="content-area">
       <router-outlet></router-outlet>
-      <!-- <footer class="clr-footer">
-        <div class="clr-row clr-col-12">
-          <div class="clr-col-3 clr-row  clr-align-items-center">
-            <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
-          </div>
-          <div class="clr-col-3 clr-row  clr-align-items-center">
-            <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: paco.nieto@gmail.com</span>
-          </div>
-        </div>
-      </footer> -->
-      <!-- <app-footer></app-footer> -->
-      <!-- <div class="clr-footer">
-        <div class="clr-row clr-col-12">
-          <div class=" clr-col-12 clr-col-md-3 clr-row clr-align-items-center">
-            <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
-          </div>
-          <div class=" clr-col-12 clr-col-md-3 clr-row clr-align-items-center">
-            <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: paco.nieto@gmail.com</span>
-          </div>
-        </div>
-      </div> -->
-    </div>
-  </div>
-  <div class="clr-footer header-5 clr-justify-content-center">
-    <div class="clr-row clr-col-12">
-      <div class=" clr-col-12 clr-col-md-3 clr-row clr-align-items-center">
-        <clr-icon shape="phone-handset"></clr-icon>&nbsp;<span>Telf: 916669754</span>
-      </div>
-      <div class=" clr-col-12 clr-col-md-3 clr-row clr-align-items-center">
-        <clr-icon shape="envelope"></clr-icon>&nbsp;<span>Email: info@paconietolocutor.com</span>
-      </div>
+      <app-footer-cmp></app-footer-cmp>
     </div>
   </div>
 

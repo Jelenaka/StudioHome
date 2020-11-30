@@ -1,1 +1,163 @@
-<p>locution works!</p>
+<div class="">
+    <div class="card-header">
+        <p class="primary-style" style="font-size: 18px;">Locución</p>
+    </div>
+    <div class="clr-row clr-justify-content-around card-block">
+        <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable"  (click)="pauseClip(audioTiendaHorrores);"> 
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    <span *ngIf="!audioTiendaHorrores.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span> La tienda de los horrores 
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/la_tienda_horrores.jpg">
+            </div>
+        </div>
+        <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable"   (click)="pauseClip(audioGuiltyGear);">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    <span *ngIf="!audioGuiltyGear.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Guilty Gear
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/Guilty_Gear.jpg">
+            </div>
+        </div>
+        <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable"  (click)="pauseClip(audioCofradia);">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    <span *ngIf="!audioCofradia.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Cofradía Sorbas
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/cofradiaSorbas.jpg" >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="">
+    <div  class="card-header">
+        <p class="primary-style" style="font-size: 18px;">Locución Documental</p>
+    </div>
+    <div class="clr-row clr-justify-content-around card-block">
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/JFK1.mp4'; sourceSelected = true; title='JFK - Oswald, la caza del asesino'">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    JFK - Oswald, la caza del asesino
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/logoTVE2.png">
+            </div>
+         </div>
+
+        <div class=" clr-col-lg-2  clr-col-md-3 clr-col-12 card clickable" (click)="source = './assets/video/unMundoEnGuerra.mp4';  sourceSelected = true; title='Un mundo en guerra'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    Un mundo en guerra
+                </p>
+            </div>
+            <div class="card-img">
+                <img style="margin-bottom:5px;" src="./assets/img/historyLogo.png">
+            </div>
+        </div>
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/hotelImposible.mp4';  sourceSelected = true; title='Hotel Imposible: Este hotel es un desastre'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                   Hotel Imposible: Este hotel es un desastre
+                </p>
+            </div>
+            <div class="card-img">
+                <div class="card-img" style="margin-top: 20%">
+                    <img src="./assets/img/travel-channel-logo.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr-row clr-justify-content-center card-block" *ngIf="!showmore" (click)="showmore = true">
+        <button class="btn btn-sm btn-link">Mostrar más...</button>
+    </div>
+    <div class="clr-row clr-justify-content-around card-block" [hidden]="!showmore">
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/Gotti-10.mp4';  sourceSelected = true; title='La mafia, John Gotti'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    La mafia, John Gotti
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/logoTVE1.png">
+            </div>
+        </div>
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable"  (click)="source = './assets/video/NS42.mp4';  sourceSelected = true; title='NASA: Archivos desclasificados'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                   NASA: Archivos desclasificados
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/discoveryMaxLogo.png">
+            </div>
+        </div>
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/BigDad.mp4';  sourceSelected = true; title='Pesca Radical'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                   Pesca Radical
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/logoDiscoveryNegative.png">
+            </div>
+        </div>
+    </div>
+    <div class="clr-row clr-justify-content-around card-block" [hidden]="!showmore">
+        <div class=" clr-col-lg-2 clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/OP0.mp4';  sourceSelected = true; title='Océanos de plástico'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    Océanos de plástico
+                </p>
+            </div>
+                <div class="card-img">
+                    <img src="./assets/img/logoTVE2.png">
+                </div>
+        </div>
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/OP1.mp4';  sourceSelected = true; title='Océanos de plástico'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                  Océanos de plástico
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/logoTVE2.png">
+            </div>
+        </div>
+        <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable"  (click)="source = './assets/video/Oswald-2.mp4';  sourceSelected = true; title='JFK - Oswald, la caza del asesino'; pausedAllElements('')">
+            <div class="card-block">
+                <p class="card-text primary-style">
+                    JFK - Oswald, la caza del asesino
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="./assets/img/discoveryMaxLogo.png">
+            </div>
+        </div>
+    </div>
+    <div class="clr-row clr-justify-content-center card-block" *ngIf="showmore" (click)="showmore = false; pausedAllElements('')">
+        <button class="btn btn-sm btn-link">Mostrar menos...</button>
+    </div>
+</div>
+<div class="modal" *ngIf="sourceSelected">
+    <div class="modal-dialog modal-lg" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" type="button">
+                    <clr-icon aria-hidden="true" shape="close" (click)="sourceSelected = false"></clr-icon>
+                </button>
+                <h3 class="modal-title">{{title}}</h3>
+            </div>
+            <video id="Oswald" width="100%" height="100%" controls>
+                <source src="{{source}}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+<div  *ngIf="sourceSelected" class="modal-backdrop" aria-hidden="true"></div>

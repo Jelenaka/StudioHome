@@ -1,48 +1,67 @@
-<div class="clr-row clr-justify-content-center">
-    
-    <div class="clr-col-2">
-        <div class="clr-row clr-justify-content-center">
-            <img src="./assets/img/micro1.png" style="opacity: 0.5;">
-        </div>
-    </div>
-    <div class="content-container clr-col-lg-6 clr-col-12">
-        <div class="card">
-            <div class="card-header">
-                Contacto
-            </div>
-            <div class="card-block">
-                <div class="card-text">
 
-                    <p>Puedes contactar y pedirme presupuesto <b>por mail</b>, o si lo prefieres
-                        <b>cumplimentar y enviarme el siguiente formulario.</b></p>
-                    <!-- TODO: HACER BOTON? -->
-                    <p><a href="mailto:info@paconietolocutor.com">Envíar correo a info@paconietolocutor.com</a></p>
-                    <br>
-                    <form clrForm [formGroup]="itemContact" clrLayout="vertical">
-                        <div class="clr-row">
-                            <div class="clr-col-md-6 clr-col-12">
-                                <div class="form-group">
-                                    <input clrInput placeholder="Tu nombre *" formControlName="name" required/>
-                                    <!-- <div *ngIf="itemContact.controls['name'].errors.required">
+    <div class="clr-row clr-justify-content-center">
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+         <script type="text/javascript">
+           function sendMail(){ Email.send({
+                Host : "smtp.paconietolocutor.com",
+                Username : "info@paconietolocutor.com",
+                Password : "cuenta10407",
+                To : 'info@paconietolocutor.com',
+                From : "egnieto22@gmail.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+         </script>
+        <div class="clr-col-2">
+            <div class="clr-row clr-justify-content-center">
+                <img src="./assets/img/micro1.png" style="opacity: 0.5;">
+            </div>
+        </div>
+        <div class="clr-col-lg-8 clr-col-12">
+            <div class="card">
+                <div class="card-header">
+                    Contacto
+                </div>
+                <div class="card-block">
+                    <div class="card-text">
+
+                        <p>Puedes contactar y pedirme presupuesto <b>por mail</b>, o si lo prefieres
+                            <b>cumplimentar y enviarme el siguiente formulario.</b></p>
+                        <!-- TODO: HACER BOTON? -->
+                        <p><a href="mailto:info@paconietolocutor.com">Envíar correo a info@paconietolocutor.com</a></p>
+                        <br>
+                        <form clrForm [formGroup]="itemContact" clrLayout="vertical">
+                            <div class="clr-row">
+                                <div class="clr-col-md-6 clr-col-12">
+                                    <div class="form-group">
+                                        <input clrInput placeholder="Tu nombre *" formControlName="name" required />
+                                        <!-- <div *ngIf="itemContact.controls['name'].errors.required">
                                         El Nom del professional es obligatori
                                     </div> -->
+                                    </div>
+                                    <input clrInput placeholder="Tu teléfono *" formControlName="phone" required />
+                                    <input clrInput placeholder="Tu email *" type="email" [email]="true"
+                                        formControlName="email" required />
                                 </div>
-                                <input clrInput placeholder="Tu teléfono *"  formControlName="phone" required/>
-                                <input clrInput placeholder="Tu email *" type="email" [email]="true" formControlName="email" required/>
+                                <div class="clr-col-md-6 clr-col-12">
+                                    <input clrInput placeholder="Asunto *" formControlName="asunto" required />
+                                    <textarea placeholder="Mensaje *" cols=40 clrTextarea required
+                                        formControlName="description" name="description"></textarea>
+                                </div>
                             </div>
-                            <div class="clr-col-md-6 clr-col-12">
-                                <input clrInput placeholder="Asunto *" formControlName="asunto" required/>
-                                <textarea placeholder="Mensaje *" cols=40 clrTextarea required
-                                formControlName="description" name="description"></textarea>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-sm btn-link increment-button" [disabled]="this.itemContact.status === 'INVALID'">Enviar formulario</button>
-                <button class="btn btn-sm btn-link increment-button" (click)="itemContact.reset();">Limpiar</button>
+                <div class="card-footer">
+                    <button class="btn btn-sm btn-link increment-button"
+                        [disabled]="this.itemContact.status === 'INVALID'" >Enviar formulario</button>
+                        <!-- <button class="btn btn-sm btn-link increment-button'" (click)="sendMail()">Enviar </button> -->
+                    <button class="btn btn-sm btn-link increment-button" (click)="itemContact.reset();">Limpiar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>

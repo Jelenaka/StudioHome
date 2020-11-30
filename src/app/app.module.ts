@@ -14,6 +14,7 @@ import { VideogamesComponent } from './portfolio/videogames/videogames.component
 import { CommercialComponent } from './portfolio/commercial/commercial.component';
 import { ElearningComponent } from './portfolio/elearning/elearning.component';
 import { LocutionComponent } from './portfolio/locution/locution.component';
+import { FooterAppComponent } from './footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocutionComponent } from './portfolio/locution/locution.component';
     VideogamesComponent,
     CommercialComponent,
     ElearningComponent,
-    LocutionComponent
+    LocutionComponent,
+    FooterAppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,6 @@ import { LocutionComponent } from './portfolio/locution/locution.component';
     ClarityModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, FooterAppComponent]
 })
 export class AppModule { }
