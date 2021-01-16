@@ -7,3 +7,14 @@
     width: 100%;
     height: auto;
   }
+
+  .btn.btn-inverse.btn-main-2{
+    color: #DD7F6C;
+    border-color: #DD7F6C;
+  }
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+      transform: scale(1.1);
+  }
+  

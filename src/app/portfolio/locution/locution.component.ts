@@ -22,6 +22,7 @@ export class LocutionComponent implements OnInit {
    //this.audioGuiltyGear = new Audio('../../assets/audio/guiltyGear.mp3'); 
     //this.audioCofradia = new Audio('../../assets/audio/cofradiaSorbas.mp3'); 
   }
+
   pausedAllElements(clip?)  {
     if(clip !== this.audioTiendaHorrores){
       this.audioTiendaHorrores.pause(); 
@@ -32,8 +33,8 @@ export class LocutionComponent implements OnInit {
     if(clip !== this.audioCofradia){
       this.audioCofradia.pause(); 
     }
-    
   }
+
   pauseClip(clip: HTMLAudioElement){
     if (clip.paused){
       clip.play();
@@ -42,5 +43,9 @@ export class LocutionComponent implements OnInit {
     }
     this.pausedAllElements(clip);
     // this.pausedAllElements();
+  }
+  
+  ngOnDestroy (){
+    this.pausedAllElements(null);
   }
 }

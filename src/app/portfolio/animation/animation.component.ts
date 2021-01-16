@@ -17,8 +17,26 @@ export class AnimationComponent implements OnInit {
    // this.audioBaki = new Audio('../../assets/audio/Baki1.mp3'); 
   }
 
-  pausedAllElements(event?)  {
+  // pausedAllElements(event?)  {
+  //     this.audioBaki.pause(); 
+  // }
+  pausedAllElements(clip?)  {
+    if(clip !== this.audioBaki){
       this.audioBaki.pause(); 
+    }
   }
 
+  pauseClip(clip: HTMLAudioElement){
+    if (clip.paused){
+      clip.play();
+    } else{
+      clip.pause();
+    }
+    this.pausedAllElements(clip);
+    // this.pausedAllElements();
+  }
+
+  ngOnDestroy (){
+    this.pausedAllElements(null);
+  }
 }

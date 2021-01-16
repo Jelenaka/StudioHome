@@ -1,18 +1,18 @@
 
 <div class="clr-row clr-justify-content-around">
-    <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable">
-        <div class="card-block">
-            <p class="card-text">
-                Baki
+    <div class="clr-col-lg-2 clr-col-md-3 clr-col-6 card clickable">
+        <div class="card-block">            
+            <p class="card-text primary-style">
+                <span *ngIf="!audioBaki.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span> Baki
             </p>
         </div>
         <div class="card-img">
-            <img src="./assets/img/baki.png" (click)="pausedAllElements();audioBaki.play()">
+            <img src="./assets/img/baki.png" (click)="pauseClip(audioBaki)">
         </div>
     </div>
-    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/Regal_Academi.mp4';  sourceSelected = true; title='Regal Academy'; pausedAllElements('')">
+    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-6 card clickable" (click)="source = './assets/video/Regal_Academi.mp4';  sourceSelected = true; title='Regal Academy'; pausedAllElements('')">
         <div class="card-block">
-            <p class="card-text">
+            <p class="card-text primary-style">
                 Regal Academy
             </p>
         </div>
@@ -20,9 +20,9 @@
             <img src="./assets/img/regal_academy.png">
         </div>
     </div>
-    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/MiAcademiaDeHeroes2.mp4';  sourceSelected = true; title='Mi academia de Héroes'; pausedAllElements('')">
+    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-6 card clickable" (click)="source = './assets/video/MiAcademiaDeHeroes2.mp4';  sourceSelected = true; title='Mi academia de Héroes'; pausedAllElements('')">
         <div class="card-block">
-            <p class="card-text">
+            <p class="card-text primary-style">
                 Mi academia de Héroes
             </p>
         </div>
@@ -32,9 +32,9 @@
     </div>
 </div>
 <div class="clr-row clr-justify-content-around">
-    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" (click)="source = './assets/video/VideoTomJerry.mp4';  sourceSelected = true; title='Tom & Jerry'; pausedAllElements('')">
+    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-6 card clickable" (click)="source = './assets/video/VideoTomJerry.mp4';  sourceSelected = true; title='Tom & Jerry'; pausedAllElements('')">
         <div class="card-block">
-            <p class="card-text">
+            <p class="card-text primary-style">
                 Tom & Jerry
             </p>
         </div>
@@ -42,9 +42,9 @@
             <img src="./assets/img/tom-y-jerry-logo.png">
         </div>
     </div>
-    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable"  (click)="source = './assets/video/Fandub.mp4';  sourceSelected = true; title='Colaboración Fandub'; pausedAllElements('')">
+    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-6 card clickable"  (click)="source = './assets/video/Fandub.mp4';  sourceSelected = true; title='Colaboración Fandub'; pausedAllElements('')">
         <div class="card-block">
-            <p class="card-text">
+            <p class="card-text primary-style">
                 Colaboración Fandub
             </p>
         </div>
@@ -62,7 +62,7 @@
                 </button>
                 <h3 class="modal-title">{{title}}</h3>
             </div>
-            <video id="Oswald" width="100%" height="100%" controls>
+            <video id="Oswald" width="100%" height="100%" controls autoplay>
                 <source src="{{source}}" type="video/mp4">
             </video>
         </div>

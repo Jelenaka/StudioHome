@@ -9,3 +9,15 @@ img {
     height: 100%;
     margin-top:5px;
   }
+  p.primary-style {
+    color:#DD7F6C;
+    font-weight: bold;
+  }
+  .bottons-tab {
+    color:#AD9849;
+    border-color: #AD9849;
+  }
+  a.bottons-tab {
+    color:#AD9849;
+    border-color: #AD9849;
+  }

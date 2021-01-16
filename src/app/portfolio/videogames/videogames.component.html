@@ -1,33 +1,38 @@
 
 <div class="clr-row clr-justify-content-around">
-    <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable">
+    
+    <div class="clr-col-lg-2 clr-col-md-3 clr-col-6 card clickable">
         <div class="card-block">
-            <p class="card-text">
-                Diablo III
+            <p class="card-text primary-style">
+               
+                <span *ngIf="!audioDiablo.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Diablo III
             </p>
         </div>
         <div class="card-img">
-            <img src="./assets/img/DiabloIII.jpg" (click)="pausedAllElements(); audioDiablo.play()">
+            <img src="./assets/img/DiabloIII.jpg" (click)="pauseClip(audioDiablo);">
+            <!-- <img src="./assets/img/DiabloIII.jpg" (click)="pausedAllElements(); audioDiablo.play()"> -->
         </div>
     </div>
-    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-12 card clickable" >
+    <div class=" clr-col-lg-2  clr-col-md-3  clr-col-6 card clickable" >
         <div class="card-block">
-            <p class="card-text">
-               Dishonored
+            <p class="card-text primary-style">
+                <span *ngIf="!audioDishonored.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Dishonored
             </p>
         </div>
         <div class="card-img">
-            <img src="./assets/img/Dishonored.jpg" (click)="pausedAllElements(); audioDishonored.play()">
+            <img src="./assets/img/Dishonored.jpg" (click)="pauseClip(audioDishonored);">
+            <!-- <img src="./assets/img/Dishonored.jpg" (click)="pausedAllElements(); audioDishonored.play()"> -->
         </div>
     </div>
-    <div class="clr-col-lg-2 clr-col-md-3 clr-col-12 card clickable">
+    <div class="clr-col-lg-2 clr-col-md-3 clr-col-6 card clickable">
         <div class="card-block">
-            <p class="card-text">
-                The Witcher
+            <p class="card-text primary-style">
+                <span *ngIf="!audioTheWitcher.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  The Witcher
             </p>
         </div>
         <div class="card-img">
-            <img src="./assets/img/TheWitcher.jpg" (click)="pausedAllElements(); audioTheWitcher.play()">
+            <img src="./assets/img/TheWitcher.jpg" (click)="pauseClip(audioTheWitcher);">
+            <!-- <img src="./assets/img/TheWitcher.jpg" (click)="pausedAllElements(); audioTheWitcher.play()"> -->
         </div>
     </div>
 </div>

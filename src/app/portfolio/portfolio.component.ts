@@ -17,9 +17,16 @@ export class PortfolioComponent implements OnInit {
   audioChicco: HTMLAudioElement;
   audioBaki: HTMLAudioElement;
 
+  openLocucion: boolean = true;
+  openVideogame: boolean = false;
+  openAnimation: boolean = false;
+  openCommecial: boolean = false;
+  openElearning: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    const element = document.getElementById('topcScroll');
+    element.scrollIntoView(true);
     this.audioTiendaHorrores = new Audio('../../assets/audio/tiendaHorrores.mp3'); 
     this.audioGuiltyGear = new Audio('../../assets/audio/guiltyGear.mp3'); 
     this.audioCofradia = new Audio('../../assets/audio/cofradiaSorbas.mp3'); 
@@ -43,4 +50,41 @@ export class PortfolioComponent implements OnInit {
     this.audioMercedesBenz.pause()
     this.audioBaki.pause();
 }
+
+// openTab(item){
+//   if(this.openLocucion == item){
+//     this.openLocucion = true;
+//   } else {
+//     this.openLocucion = false;
+//   }
+//   if(this.openVideogame == item){
+//     this.openVideogame = true;
+//   } else {
+//     this.openVideogame = false;
+//   }
+//   if(this.openAnimation == item){
+//     this.openAnimation = true;
+//   } else {
+//     this.openAnimation = false;
+//   }
+//   if(this.openCommecial == item){
+//     this.openCommecial = true;
+//   } else {
+//     this.openCommecial = false;
+//   }
+//   if(this.openElearning == item){
+//     this.openElearning = true;
+//   } else {
+//     this.openElearning = false;
+//   }
+// }
+
+closeAll(){
+  this.openElearning = false;
+  this.openCommecial = false;
+  this.openAnimation = false;
+  this.openVideogame = false;
+  this.openLocucion = false;
+}
+
 }

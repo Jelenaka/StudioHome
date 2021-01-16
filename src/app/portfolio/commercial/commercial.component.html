@@ -1,23 +1,23 @@
 <div class="clr-row clr-justify-content-around">
-    <div class="clr-col-lg-2 clr-col-md-5 clr-col-12 card clickable">
+    <div class="clr-col-lg-2 clr-col-md-5 clr-col-6 card clickable">
         <div class="card-block">
-            <p class="card-text">
-               Demo Mercedes Benz
+            <p class="card-text primary-style">
+                <span *ngIf="!audioMercedesBenz.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Demo Mercedes Benz
             </p>
         </div>
         <div class="card-img">
-            <img src="./assets/img/mercedesLogoNegative.png" (click)="pausedAllElements(); audioMercedesBenz.play()">
+            <img src="./assets/img/mercedesLogoNegative.png" (click)="pauseClip(audioMercedesBenz);">
         </div>
     </div>
-    <div class="clr-col-lg-2 clr-col-md-5 clr-col-12 card clickable">
+    <div class="clr-col-lg-2 clr-col-md-5 clr-col-6 card clickable">
         <div class="card-block">
-            <p class="card-text">
-                Demo Spot Chicco 2010
+            <p class="card-text primary-style">
+                <span *ngIf="!audioChicco.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Demo Spot Chicco 2010
             </p>
         </div>
         <br>
         <div class="card-img">
-            <img src="./assets/img/Chicco_Logo_negative.png" (click)="pausedAllElements(); audioChicco.play()">
+            <img src="./assets/img/Chicco_Logo_negative.png" (click)="pauseClip(audioChicco);">
         </div>
     </div>
 </div>

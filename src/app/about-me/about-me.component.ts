@@ -10,6 +10,8 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const element = document.getElementById('topScroll');
+    element.scrollIntoView(true);
   }
 
 }

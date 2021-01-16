@@ -1,12 +1,12 @@
 <div class="clr-row clr-justify-content-around">
     <div class="clr-col-lg-2 clr-col-md-6 clr-col-12 card clickable">
         <div class="card-block">
-            <p class="card-text">
-                Vocento
+            <p class="card-text primary-style">
+                <span *ngIf="!audioVocento.paused"> <clr-icon shape="play"></clr-icon>&nbsp; &nbsp;</span>  Vocento
             </p>
         </div>
         <div class="card-img"> 
-            <img src="./assets/img/vocento.png" (click)="pausedAllElements();">
+            <img src="./assets/img/vocento.png" (click)="pauseClip(audioVocento);">
         </div>
     </div>
 </div>

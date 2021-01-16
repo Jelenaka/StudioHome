@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    const element = document.getElementById('topScroll');
+    element.scrollIntoView(true);
   }
 
   onAudioPlay(){
